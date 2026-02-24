@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">SMART LOGIN</div>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Login Container -->
+    <div class="main-container" id="loginContainer">
+        <div class="form-card">
+            <h1 class="system-title">Smart Login System</h1>
+            
+            <form id="loginForm">
+                <input type="email" id="loginEmail" class="form-input" placeholder="Enter your email" required>
+                <input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required>
+                <button type="submit" class="btn btn-login">Login</button>
+            </form>
+            
+            <p class="toggle-link">
+                Don't have an account? <a href="#" id="showSignup">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="main-container hidden" id="signupContainer">
+        <div class="form-card">
+            <h1 class="system-title">Smart Login System</h1>
+            
+            <form id="signupForm">
+                <input type="text" id="signupName" class="form-input" placeholder="Enter your name" required>
+                <input type="email" id="signupEmail" class="form-input" placeholder="Enter your email" required>
+                <input type="password" id="signupPassword" class="form-input" placeholder="Enter your password" required>
+                <button type="submit" class="btn btn-signup">Sign Up</button>
+            </form>
+            
+            <div id="signupMessage" class="message success-message hidden">
+                Registration successful! You can now login.
+            </div>
+            
+            <p class="toggle-link">
+                Already have an account? <a href="#" id="showLogin">Login</a>
+            </p>
+        </div>
+    </div>
+
+  
+    <div class="main-container hidden" id="homeContainer">
+        <div class="welcome-card">
+            <h1>Welcome <span id="userNameDisplay"></span></h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
